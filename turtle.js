@@ -21,7 +21,14 @@ export class Turtle {
     constructor(config) {
         this.canvas = document.getElementById(config?.canvas ?? 'canvas');
         this.ctx = this.canvas.getContext('2d');
+
+        this.width = this.canvas.width;
+        this.height = this.canvas.height;
+        this.x = this.width / 2;
+        this.y = this.height / 2;
+
         this.path.moveTo(this.x, this.y);
+
         this.onKeyPressed(config?.keyPressed);
         this.onMouseClicked(config?.mouseClicked);
         this.onMouseMoved(config?.mouseMoved);
