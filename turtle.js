@@ -6,7 +6,7 @@ export class Turtle {
     static singleton = undefined;
     canvas = undefined;
     ctx = undefined;
-    path = new Path2D();
+    path = undefined;
     pathToFill = undefined;
     width = 500;
     height = 500;
@@ -26,8 +26,6 @@ export class Turtle {
         this.height = this.canvas.height;
         this.x = this.width / 2;
         this.y = this.height / 2;
-
-        this.path.moveTo(this.x, this.y);
 
         this.onKeyPressed(config?.keyPressed);
         this.onMouseClicked(config?.mouseClicked);
@@ -71,6 +69,8 @@ export class Turtle {
         const newY = oldY - Math.cos((2 * Math.PI * this.angle) / 360) * pixels;
         this.x = newX;
         this.y = newY;
+        this.path = new Path2D();
+        this.path.moveTo(oldX, oldY);
         this.path.lineTo(newX, newY);
         this.pathToFill?.lineTo(newX, newY);
         this.ctx.strokeStyle = this.penColor;
