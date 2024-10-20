@@ -1,0 +1,24 @@
+{
+  "name": "@andreas-aeschlimann/javascript-canvas-turtle",
+  "version": "1.0.1",
+  "description": "",
+  "main": "turtle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreas-aeschlimann/javascript-canvas-turtle.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Turtle",
+    "Canvas"
+  ],
+  "author": "Andreas Aeschlimann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreas-aeschlimann/javascript-canvas-turtle/issues"
+  },
+  "homepage": "https://github.com/andreas-aeschlimann/javascript-canvas-turtle#readme"
+}
