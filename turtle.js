@@ -75,7 +75,9 @@ export class Turtle {
         this.pathToFill?.lineTo(newX, newY);
         this.ctx.strokeStyle = this.penColor;
         this.ctx.lineWidth = this.lineWidth;
-        this.ctx.stroke(this.path);
+        if (!this.hidePen) {
+            this.ctx.stroke(this.path);
+        }
     }
 
     back(pixels) {
