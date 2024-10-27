@@ -152,6 +152,26 @@ export class Turtle {
         [this.x, this.y] = this.__userCoordinatesToCanvasCoordinates([x, y]);
     }
 
+    getPos() {
+        return this.__canvasCoordinatesToUserCoordinates([this.x, this.y]);
+    }
+
+    getX(x) {
+        return this.getPos()[0];
+    }
+
+    setX(x) {
+        this.setPos(x, this.getY());
+    }
+
+    getY(y) {
+        return this.getPos()[1];
+    }
+
+    setY(y) {
+        this.setPos(this.getX(), y);
+    }
+
     setRandomPos(xMin, xMax, yMin, yMax) {
         const x = xMin + Math.random() * (xMax - xMin);
         const y = yMin + Math.random() * (yMax - yMin);
@@ -187,6 +207,11 @@ window.penDown = () => Turtle.singleton?.penDown();
 window.setLineWidth = (width) => Turtle.singleton?.setLineWidth(width);
 window.dot = (radius) => Turtle.singleton?.dot(radius);
 window.setPos = (x, y) => Turtle.singleton?.setPos(x, y);
+window.getPos = () => Turtle.singleton?.getPos();
+window.setX = (x) => Turtle.singleton?.setX(x);
+window.getX = () => Turtle.singleton?.getX();
+window.setY = (y) => Turtle.singleton?.setY(y);
+window.getY = () => Turtle.singleton?.getY();
 window.setRandomPos = (xMin, xMax, yMin, yMax) =>
     Turtle.singleton?.setRandomPos(xMin, xMax, yMin, yMax);
 
