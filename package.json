@@ -1,6 +1,6 @@
 {
   "name": "@andreas-aeschlimann/javascript-canvas-turtle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "turtle.js",
   "scripts": {
