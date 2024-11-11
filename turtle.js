@@ -220,6 +220,7 @@ window.setRandomPos = (xMin, xMax, yMin, yMax) =>
 //////////////////////////////////
 
 window.inputInt = (text) => parseInt(prompt(text), 10);
+window.inputFloat = (text) => parseFloat(prompt(text));
 window.inputString = (text) => prompt(text) + '';
 
 window.repeat = (count, callback) => {
